@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registrasi Bromo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+      body {
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .hero {
+        background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 25%, rgba(0, 0, 0, 0.35) 100%), url("db/hero-2.jpg");
+        background-size: cover;
+        background-position: center bottom;
+        height: 100vh;
+      }
+
+      @media (max-width: 767.9px) {
+        .hero {
+          background-image: linear-gradient(0deg, rgba(1, 1, 1, 0.5) 0%, rgba(0, 0, 0, 0.4) 25%, rgba(255, 255, 255, 0) 100%), url("db/Enzy-Bromo.jpg");
+        }
+
+        .hero-inner {
+          bottom: unset !important;
+          top: 5%;
+        }
+      }
+      /* booking */
+      .bi-tag::before {
+        content: "\f5b0";
+        transform: rotateY(180deg);
+      }
+
+      .btn-submit {
+        background-color: #577356;
+        color: white;
+        font-weight: bold;
+      }
+
+      .btn-submit:hover {
+        color: #577356;
+        background-color: white;
+        border-color: #577356;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="hero-inner position-absolute text-center text-white w-100" style="bottom: 5%">
+        <p class="fs-3 fw-bold text-decoration-underline"><span class="typed" data-typed-items="REGISTRASI TRIP BROMO"></span></p>
+        <img src="db/logo-himpaudi.png" alt="" width="75" class="img-fluid" />
+        <p class="fs-2 fw-bold mb-0">HIMPAUDI</p>
+        <p class="fs-5">Kec. Manyar, Gresik</p>
+        <p class="fs-6 fw-bold">1 - 2 Maret 2024</p>
+      </div>
+    </div>
+    <div class="container pb-5 mb-5">
+      <h2 class="text-center fw-bold my-5">FORMULIR REGISTRASI</h2>
+      <form name="bromo-form" class="p-3 rounded bg-white needs-validation">
+        <div class="row mb-3">
+          <label for="inputnama" class="col-sm-2 form-label">Nama Lengkap</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputnama" placeholder="Nama Lengkap" name="nama" style="text-transform: capitalize" required />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputtanggal" class="col-sm-2 form-label">Tanggal Lahir</label>
+          <div class="col-sm-10">
+            <input type="date" class="form-control" id="inputtanggal" name="tgllahir" placeholder="Tanggal Lahir" required />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputJeniskelamin" class="col-sm-2 form-label">Jenis Kelamin</label>
+          <div class="col-sm-10">
+            <select class="form-select" name="jeniskelamin" id="inputJeniskelamin" required>
+              <option selected value="">-</option>
+              <option value="Laki-laki">Laki-laki</option>
+              <option value="Perempuan">Perempuan</option>
+            </select>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputJenisid" class="col-sm form-label">Jenis Identitas</label>
+          <div class="col-sm-10">
+            <select class="form-select" name="jenisid" id="inputJenisid" required>
+              <option selected value="">-</option>
+              <option value="KTP">KTP</option>
+              <option value="SIM">SIM</option>
+              <option value="Lainnya">Lainnya</option>
+            </select>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputLembaga" class="col-sm form-label">Lembaga Asal</label>
+          <div class="col-sm-10">
+            <select class="form-select" name="lembaga" id="inputLembaga" required>
+              <option selected value="">-</option>
+              <option value="1">KB Aisyiyah Gumeno</option>
+              <option value="2">KB Aisyiyah Karangrejo</option>
+              <option value="3">KB Al Kindi PPS</option>
+              <option value="4">KB Anggrek PPI</option>
+              <option value="5">KB Cahaya Aisyiyah PPS</option>
+              <option value="6">KB DWP Al Mu'minah Sembayat</option>
+              <option value="7">KB Hafidz Qur'an Al Amin</option>
+              <option value="8">KB Islam Tunas Bakti 6 GKB</option>
+              <option value="9">KB Islam Tunas Bakti 7 GKB</option>
+              <option value="10">KB Kenanga 2 PPS</option>
+              <option value="11">KB Mentari Ceria Gumeno</option>
+              <option value="12">KB Oxford Puri School PPS</option>
+              <option value="13">KB Pembina GKB</option>
+              <option value="14">KB PIKPG Pongangan</option>
+              <option value="15">KB Sehati Abadi</option>
+              <option value="16">KB Tunas Aisyiyah Pongangan</option>
+              <option value="17">KB Tunas Mulia Betoyo Kauman</option>
+              <option value="18">KB Yaa Bunayya</option>
+              <option value="19">KBIT Al Ummah</option>
+              <option value="20">KBM NU 03 Al Firdaus Manyar</option>
+              <option value="21">KBM NU 06 Miftahul Huda Karangrejo</option>
+              <option value="22">KBM NU 104 Al Firdaus Morobakung</option>
+              <option value="23">KBM NU 106 Al Ikhlas GSP</option>
+              <option value="24">KBM NU 107 Roudlotut Tholibin Tanggul Rejo</option>
+              <option value="25">KBM NU 108 Nurul Ulum Betoyo Guci</option>
+              <option value="26">KBM NU 112 Nurul Jadid Banyuwangi</option>
+              <option value="27">KBM NU 115 Mambaus Sholihin Suci</option>
+              <option value="28">KBM NU 116 Al Firdaus Pongangan</option>
+              <option value="29">KBM NU 128 Al Husna Tepen</option>
+              <option value="30">KBM NU 134 Roudlotun Nafilah Peganden</option>
+              <option value="31">KBM NU 25 Al Falah Sembayat</option>
+              <option value="32">KBM NU 55 Futuhatul Ulum Roomo</option>
+              <option value="33">KBM NU 73 Al Fithriyah Peganden</option>
+              <option value="34">KBM NU 83 Hidayatus Shibyan</option>
+              <option value="35">KBM NU 84 Irsyadul Ummah Pejangganan</option>
+              <option value="36">KBM NU 85 Sunan Dalem Gumeno</option>
+              <option value="37">KBM NU 91 Al Hikmah Ngampel</option>
+              <option value="38">KBM NU 92 Nurul Huda Leran</option>
+              <option value="39">KBM NU 98 Mambaul Huda Kuti</option>
+              <option value="40">TAAS Al Ummah GKB</option>
+              <option value="41">TAAT PPS</option>
+              <option value="42">TPA Harmoni</option>
+              <option value="43">TPA PIKPG Pongangan</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-submit w-100 mb-4 button-kirim rounded">DAFTAR</button>
+        <button class="btn btn-submit w-100 mb-4 button-loading d-none" type="button" disabled>
+          <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+          Loading...
+        </button>
+      </form>
+      <div class="alert alert-success alert-dismissible fade show mb-4 my-alerto d-none" role="alert">
+        <b>Registrasi sukses!</b> Data registrasi anda sudah terkirim.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="db/typed.js/typed.umd.js"></script>
+    <script>
+      // typed JS
+      const typed = document.querySelector(".typed");
+      if (typed) {
+        let typed_strings = typed.getAttribute("data-typed-items");
+        typed_strings = typed_strings.split(",");
+        new Typed(".typed", {
+          strings: typed_strings,
+          loop: true,
+          typeSpeed: 100,
+          backSpeed: 50,
+          backDelay: 2000,
+        });
+      }
+
+      const scriptURL = "https://script.google.com/macros/s/AKfycbzie0fJ4btUBXUnk5FB7W2qUTEZRSPSb8tG1klx_NT31YdehPVd1lRAM5XPEovLcyLq/exec";
+      const form = document.forms["bromo-form"];
+      const btnKirim = document.querySelector(".button-kirim");
+      const btnLoading = document.querySelector(".button-loading");
+      const myAlert = document.querySelector(".my-alerto");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // klik book, ganti btn-loading, btn-book ilang
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            // btn-loading ilang, btn-book muncul
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            myAlert.classList.toggle("d-none");
+            // reset form
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
+</html>

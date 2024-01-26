@@ -172,10 +172,7 @@
           Loading...
         </button>
       </form>
-      <div class="alert alert-success alert-dismissible fade show mb-4 my-alerto d-none" role="alert">
-        <b>Registrasi sukses!</b> Data registrasi anda sudah terkirim.
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
+      <div id="myAlert"></div>
     </div>
 
     <div class="container pb-5">
@@ -284,7 +281,18 @@
       const form = document.forms["bromo-form"];
       const btnKirim = document.querySelector(".button-kirim");
       const btnLoading = document.querySelector(".button-loading");
-      const myAlert = document.querySelector(".my-alerto");
+      const alertPlaceholder = document.getElementById("myAlert");
+      const appendAlert = (message, type) => {
+        const wrapper = document.createElement("div");
+        wrapper.innerHTML = [
+          `<div class="alert alert-${type} alert-dismissible fade show mb-4" role="alert">`,
+          `   <div>${message}</div>`,
+          '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+          "</div>",
+        ].join("");
+
+        alertPlaceholder.append(wrapper);
+      };
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -296,12 +304,16 @@
             // btn-loading ilang, btn-book muncul
             btnLoading.classList.toggle("d-none");
             btnKirim.classList.toggle("d-none");
-            myAlert.classList.toggle("d-none");
             // reset form
             form.reset();
+            // alert message
+            appendAlert("<b>Registrasi sukses!</b> Data registrasi anda sudah terkirim.", "success");
             console.log("Success!", response);
           })
-          .catch((error) => console.error("Error!", error.message));
+          .catch((error) => {
+            console.error("Error!", error.message);
+            appendAlert("Registrasi gagal! Mohon coba lagi.", "danger");
+          });
       });
     </script>
   </body>
